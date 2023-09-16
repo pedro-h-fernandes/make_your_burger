@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
     #main-banner {
-        background: url('/img/burger.jpg') no-repeat 0 -260px fixed ;
+        background: url('/img/burger.jpg') no-repeat 0 -350px ;
         background-size: cover;
         height: 500px;
         display: flex;
