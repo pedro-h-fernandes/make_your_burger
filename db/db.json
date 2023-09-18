@@ -77,5 +77,48 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "nome": "Pedro Henrique Fernandes",
+      "carne": "Maminha",
+      "pao": "Integral",
+      "opcionais": [
+        "Bacon",
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "Pedro Henrique ",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "Giovanna",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "Gi",
+      "carne": "Alcatra",
+      "pao": "Italiano Branco",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 4
+    }
+  ]
 }
