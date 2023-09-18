@@ -1,9 +1,10 @@
 <template>
     <div>
+        <Messages :msg="msg" v-show="msg"/>
         <form id="burger-form" @submit="criarBurger">
             <div class="input-container">
                 <label for="nomeCliente">Nome do cliente:</label>
-                <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite seu nome">
+                <input required type="text" id="nome" name="nome" v-model="nome" placeholder="Digite seu nome">
             </div>
             <div class="input-container">
                 <label for="pao">Escolha o tipo de pão:</label>
@@ -35,8 +36,13 @@
 </template>
 
 <script>
+import Messages from './Messages.vue'
 export default {
     name: 'BurgerForm',
+
+    components: {
+        Messages
+    },
 
     data() {
         return {
@@ -80,10 +86,11 @@ export default {
                 body: dataJson,
             })
 
-            // const res = await req.json()
+            const res = await req.json()
 
-            //colocar msg de sistema
+            this.msg = `Hamburger Nº ${res.id} realizado com sucesso`
 
+            this.limpaMsgApos3Seg()
             this.limparCampos()
         },
 
@@ -92,6 +99,10 @@ export default {
             this.carne = ''
             this.pao = ''
             this.opcionaisCli = []
+        },
+
+        limpaMsgApos3Seg() {
+            setTimeout(() => this.msg = "", 3000)
         }
 
     },
