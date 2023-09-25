@@ -86,20 +86,8 @@
         "Bacon",
         "Salame"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 1
-    },
-    {
-      "nome": "Pedro Henrique ",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 2
     },
     {
       "nome": "Giovanna",
@@ -109,37 +97,8 @@
         "Bacon",
         "Cheddar"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 3
-    },
-    {
-      "nome": "Gi",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "nome": "Pedro Henrique Fernandes",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "nome": "Claudio",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 6
     },
     {
       "nome": "pablo",
@@ -148,8 +107,16 @@
       "opcionais": [
         "Cebola roxa"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 7
+    },
+    {
+      "nome": "fgdfg",
+      "carne": "Maminha",
+      "pao": "Italiano Branco",
+      "opcionais": [],
+      "status": "Finalizado",
+      "id": 8
     }
   ]
 }

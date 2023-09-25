@@ -1,4 +1,5 @@
 <template>
+    <Messages :msg="msg" v-show="msg" />
     <div id="burgerTable">
         <table style="width:70%;">
             <thead>
@@ -25,10 +26,13 @@
                     </td>
                     <td class="acoes">
                         <div>
-                            <select name="status" class="status">
-                                <option value="{{ pedido.status }}">{{ pedido.status }}</option>
+                            <select name="status" class="status" @change="updateBurger($event, pedido.id)">
+                                <option value="">Selecione</option>
+                                <option v-for="status in status" :key="status.id" :selected="pedido.status == status.tipo"
+                                    :value="status.tipo">{{ status.tipo }}
+                                </option>
                             </select>
-                            <button class="delete-btn">
+                            <button class="delete-btn" @click="deleteBurger(pedido.id)">
                                 <div class="cancelar"><img src="/img/x-circle.svg" alt="">Cancelar</div>
                             </button>
 
@@ -40,14 +44,20 @@
     </div>
 </template>
 <script>
+import Messages from './Messages.vue'
 export default {
     name: 'Dashboard',
 
     data() {
         return {
             pedidos: null,
-            status:null
+            msg: null,
+            status: null
         }
+    },
+
+    components: {
+        Messages,
     },
 
     methods: {
@@ -56,7 +66,6 @@ export default {
             const req = await fetch('http://localhost:3000/burgers')
             const data = await req.json()
 
-            console.log(data)
             this.pedidos = data;
         },
 
@@ -64,8 +73,40 @@ export default {
             const req = await fetch('http://localhost:3000/status')
             const data = await req.json()
 
-            console.log(data)
             this.status = data;
+        },
+
+        async deleteBurger(id) {
+            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+                method: "DELETE" //este modo de fazer funciona por conta da lib json serve onde esta sendo feito o bakend
+            })
+
+            const res = await req.json()
+            //msg
+            this.msg = `Hamburger removido com sucesso`
+
+            this.limpaMsgApos3Seg()
+
+            this.getPedidos()
+        },
+
+        async updateBurger(event, id) {
+            const option = event.target.value;
+            const dataJson = JSON.stringify({ status: option })
+            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: dataJson,
+            })
+            
+            const res = await req.json();
+            this.msg = `Hamburger Nº ${res.id} atualizado com sucesso para "${res.status}"`
+            this.limpaMsgApos3Seg()
+            console.log(res)
+        },
+
+        limpaMsgApos3Seg() {
+            setTimeout(() => this.msg = "", 3000)
         }
     },
 
@@ -91,6 +132,7 @@ thead th {
     background-color: #f7c334;
     text-align: justify;
     padding: 2px;
+    font-size: 1.6rem;
 
 }
 
@@ -102,10 +144,12 @@ tbody td {
 tbody td {
     border: 1px solid black;
     padding-left: 5px;
+    font-size: 1.6rem;
 }
 
 .opcionais ul {
     margin-left: 20px;
+    font-size: 2.5rem;
 }
 
 .acoes {
@@ -121,6 +165,11 @@ tbody td {
 .acoes select {
     width: 50%;
     height: 25px;
+    font-size: 1.5rem;
+}
+
+select option {
+    font-size: 1.2rem;
 }
 
 .delete-btn {
@@ -129,6 +178,7 @@ tbody td {
     padding: 2px;
     border: 1px solid #000000;
     transition: .5s;
+    font-size: 2rem;
 }
 
 .delete-btn:hover {
