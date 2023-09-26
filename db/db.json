@@ -88,35 +88,6 @@
       ],
       "status": "Finalizado",
       "id": 1
-    },
-    {
-      "nome": "Giovanna",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Cheddar"
-      ],
-      "status": "Em produção",
-      "id": 3
-    },
-    {
-      "nome": "pablo",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Cebola roxa"
-      ],
-      "status": "Em produção",
-      "id": 7
-    },
-    {
-      "nome": "fgdfg",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [],
-      "status": "Finalizado",
-      "id": 8
     }
   ]
 }
