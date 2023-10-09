@@ -150,6 +150,7 @@ tbody td {
 .opcionais ul {
     margin-left: 20px;
     font-size: 2.5rem;
+    padding: 2px;
 }
 
 .acoes {
@@ -163,7 +164,7 @@ tbody td {
 }
 
 .acoes select {
-    width: 50%;
+    width: 55%;
     height: 25px;
     font-size: 1.5rem;
 }

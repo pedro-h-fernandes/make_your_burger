@@ -88,6 +88,38 @@
       ],
       "status": "Finalizado",
       "id": 1
+    },
+    {
+      "nome": "João",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Pepino",
+        "Cebola roxa",
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "Guilherme",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 5
+    },
+    {
+      "nome": "Guilherme",
+      "carne": "Maminha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 6
     }
   ]
 }
