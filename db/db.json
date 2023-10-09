@@ -77,30 +77,7 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "nome": "Pedro Henrique Fernandes",
-      "carne": "Maminha",
-      "pao": "Integral",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Finalizado",
-      "id": 1
-    },
-    {
-      "nome": "João",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Pepino",
-        "Cebola roxa",
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
+  "pedidos": [
     {
       "nome": "Guilherme",
       "carne": "Picanha",
@@ -120,6 +97,17 @@
       ],
       "status": "Solicitado",
       "id": 6
+    },
+    {
+      "nome": "Vinicius",
+      "carne": "Picanha",
+      "pao": "Integral",
+      "opcionais": [
+        "Cebola roxa",
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 7
     }
   ]
 }
