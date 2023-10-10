@@ -2,34 +2,38 @@
     <div>
         <Messages :msg="msg" v-show="msg" />
         <form id="burger-form" @submit="criarBurger">
-            <div class="input-container">
-                <label for="nomeCliente">Nome do cliente:</label>
-                <input required type="text" id="nome" name="nome" v-model="nome" placeholder="Digite seu nome">
+            <div class="mb-3">
+                <label for="nomeCliente" class="form-label">Nome do cliente:</label>
+                <input required type="text" class="form-control h-auto border border-black" id="nome" name="nome" v-model="nome"
+                    placeholder="Digite seu nome">
             </div>
-            <div class="input-container">
+
+            <div class="mb-3">
                 <label for="pao">Escolha o tipo de pão:</label>
-                <select name="pao" id="pao" v-model="pao">
+                <select required class="form-select h-auto border border-black" name="pao" id="pao" v-model="pao">
                     <option value="">Selecione o seu pão</option>
                     <option v-for="(pao, index) in paes" :key="index" :value="pao.tipo">{{ pao.tipo }}</option>
                 </select>
             </div>
-            <div class="input-container">
+
+            <div class="mb-3">
                 <label for="carne">Escolha a carne do seu burger:</label>
-                <select name="carne" id="carne" v-model="carne">
+                <select required class="form-select h-auto border border-black" name="carne" id="carne" v-model="carne">
                     <option value="">Selecione o tipo de carne</option>
                     <option v-for="(carne, index) in carnes" :key="index" :value="carne.tipo">{{ carne.tipo }}</option>
                 </select>
             </div>
+
             <div id="opcionais-container" class="input-container">
                 <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
-                <div v-for="opcional in opcionaisData" :key="opcional.id" class="checkbox-container">
+                <div v-for="opcional in opcionaisData" :key="opcional.id" class="checkbox-container mb-3 ">
                     <input type="checkbox" name="opcionais" id="opcionais" v-model="opcionaisCli" :value="opcional.tipo">
                     <span> {{ opcional.tipo }}</span>
                 </div>
             </div>
 
             <div class="input-btn">
-                <input type="submit" class="submit-btn" value="Criar meu burger">
+                <input type="submit" class="submit-btn h-auto" value="Criar meu burger">
             </div>
         </form>
     </div>
@@ -97,7 +101,7 @@ onMounted(() => {
 </script>
 <style scoped>
 #burger-form {
-    max-width: 400px;
+    max-width: 30%;
     margin: 0 auto;
     font-size: 5rem;
 }
@@ -118,8 +122,14 @@ label {
 
 input,
 select {
-    padding: 5px 10px;
+    padding: 6px 10px;
+    font-size: 1.6rem;
     width: 300px;
+    height: 30px;
+}
+
+input::placeholder {
+    font-size: 2rem;
 }
 
 #opcionais-container {
@@ -138,11 +148,14 @@ select {
     margin-bottom: 20px;
 }
 
+option {
+    font-size: 1.4rem;
+}
+
 .checkbox-container span,
 .checkbox-container input {
     width: auto;
 }
-
 
 .checkbox-container span {
     margin-left: 6px;
@@ -163,6 +176,7 @@ select {
     margin: 0 auto;
     cursor: pointer;
     transition: .5s;
+    box-shadow: 2px 2px 4px #000000c0;
 }
 
 .submit-btn:hover {
