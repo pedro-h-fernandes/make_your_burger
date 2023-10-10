@@ -63,7 +63,7 @@ export default {
     methods: {
         async getPedidos() {
 
-            const req = await fetch('http://localhost:3000/burgers')
+            const req = await fetch('http://localhost:3000/pedidos')
             const data = await req.json()
 
             this.pedidos = data;
@@ -77,7 +77,7 @@ export default {
         },
 
         async deleteBurger(id) {
-            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+            const req = await fetch(`http://localhost:3000/pedidos/${id}`, {
                 method: "DELETE" //este modo de fazer funciona por conta da lib json serve onde esta sendo feito o bakend
             })
 
@@ -93,7 +93,7 @@ export default {
         async updateBurger(event, id) {
             const option = event.target.value;
             const dataJson = JSON.stringify({ status: option })
-            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+            const req = await fetch(`http://localhost:3000/pedidos/${id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: dataJson,
@@ -150,6 +150,7 @@ tbody td {
 .opcionais ul {
     margin-left: 20px;
     font-size: 2.5rem;
+    padding: 2px;
 }
 
 .acoes {
@@ -163,7 +164,7 @@ tbody td {
 }
 
 .acoes select {
-    width: 50%;
+    width: 55%;
     height: 25px;
     font-size: 1.5rem;
 }
