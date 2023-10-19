@@ -101,8 +101,9 @@ onMounted(() => {
 </script>
 <style scoped>
 #burger-form {
-    max-width: 30%;
+    width: fit-content;
     margin: 0 auto;
+    /* background-color: #fcba03; */
     font-size: 5rem;
 }
 
@@ -135,6 +136,7 @@ input::placeholder {
 #opcionais-container {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 350px;
 }
 
 #opcionais-title {

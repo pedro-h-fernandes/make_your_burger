@@ -23,4 +23,10 @@ export default {
   h1{
     text-align: left;
   }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
