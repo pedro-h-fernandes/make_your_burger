@@ -4,7 +4,7 @@
             <div class="container-fluid d-flex justify-content-space-between">
                 <RouterLink id="logo-url" class="links" to="/"><img :src="logo" :alt="alt" id="logo"></RouterLink>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button id="toggler-btn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,8 +38,8 @@ export default {
 <style scoped>
 
 #logo {
-    max-width: 45px;
-    max-height: 45px;
+    max-width: 40px;
+    max-height: 40px;
 }
 
 nav{
