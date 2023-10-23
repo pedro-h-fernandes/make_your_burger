@@ -1,6 +1,6 @@
 <template >
     <header>
-        <nav class="navbar fixed-top navbar-expand-sm py-4 px-5 d-flex justify-content-md-between" data-bs-theme="dark">
+        <nav class="navbar fixed-top navbar-expand-sm py-2 px-5 d-flex justify-content-md-between" data-bs-theme="dark">
             <div class="container-fluid d-flex justify-content-space-between">
                 <RouterLink id="logo-url" class="links" to="/"><img :src="logo" :alt="alt" id="logo"></RouterLink>
 
