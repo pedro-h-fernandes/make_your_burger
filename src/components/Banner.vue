@@ -13,10 +13,10 @@ export default {
 
 <style scoped>
 #main-banner {
-    background: url('/img/burger.jpg') no-repeat 0 -350px;
+    background: url('/img/burger.jpg');
     background-size:cover;
     width: 100%;
-    height: 65vh;
+    height: 72vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -24,7 +24,7 @@ export default {
 
 h1 {
     padding: 2%;
-    width: 500px;
+    width: 35%;
     padding-left: 5%;
     color: #fff;
     text-align: center;
