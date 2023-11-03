@@ -10,7 +10,7 @@ export default {
 </script>
 <style scoped>
 #footer {
-    height:36vh;
+    height:30vh;
     font-size: 2.3rem;
     background-color: #222;
     border-top: 4px solid #111;

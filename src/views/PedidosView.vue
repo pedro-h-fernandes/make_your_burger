@@ -1,6 +1,6 @@
 <template>
   <div class="main-container mb-lg">
-    <h1 class="p-2 mb-2">Gerenciar pedidos:</h1>
+    <h1 class="p-2 my-3">Gerenciar pedidos:</h1>
     <Dashboard/>
   </div>
 </template>

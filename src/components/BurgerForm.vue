@@ -136,7 +136,7 @@ input::placeholder {
 #opcionais-container {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 350px;
+    width: 100%;
 }
 
 #opcionais-title {
@@ -184,5 +184,11 @@ option {
 .submit-btn:hover {
     background-color: transparent;
     color: #222;
+}
+
+@media (min-width: 320px){
+    #burger-form{
+        width: 320px;
+    }
 }
 </style>

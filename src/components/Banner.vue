@@ -15,6 +15,7 @@ export default {
 #main-banner {
     background: url('/img/burger.jpg');
     background-size:cover;
+    background-position: center center;
     width: 100%;
     height: 72vh;
     display: flex;
@@ -30,5 +31,16 @@ h1 {
     text-align: center;
     font-size: 4.5rem;
     background-color: #222;
+}
+
+@media screen and (max-width: 777px){
+    h1{
+        font-size: 3.5rem;
+    }
+}
+@media screen and (max-width: 375px){
+    h1{
+        font-size: 2.5rem;
+    }
 }
 </style>

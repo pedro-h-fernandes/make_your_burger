@@ -1,4 +1,4 @@
-grava<template>
+<template>
   <Navbar :logo="logo" :alt="alt" />
   <RouterView />
   <Footer />
