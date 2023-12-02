@@ -1,7 +1,7 @@
 <template>
   <Banner />
-  <main class="main-container">
-    <div>
+  <main class="main-container container-fluid ">
+    <div id="formulario bg-primary">
       <h1>Monte o seu burger:</h1>
       <BurgerForm />
     </div>
@@ -9,7 +9,7 @@
     <picture>
       <source media="(min-width: 320px) and (max-width: 850px)" srcset="public\img\comendo-burger320.svg">
       <source srcset="public\img\comendo-burger.svg" alt="">
-      <img src="public\img\comendo-burger.svg" alt="">
+      <img class="image-fluid" src="public\img\comendo-burger.svg" alt="ilustração de alguem comendo hamburger">
     </picture>
 
   </main>
@@ -29,8 +29,14 @@ export default {
 </script>
 
 <style scoped>
+
+#formulario{
+  width: 40vw;
+}
+
 h1 {
   text-align: left;
+  font-size: 2vw;
 }
 
 main {
@@ -45,5 +51,14 @@ main {
   img{ 
     margin-top: 30px;
   }
+}
+@media screen and (min-width: 320px) and (max-width: 560px) {
+ #formulario {
+  width: 90vw;
+ }
+
+ h1{
+  font-size:6vw;
+ }
 }
 </style>

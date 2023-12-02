@@ -1,7 +1,8 @@
 <template>
-    <div id="main-banner">
-        <h1>Make your Burger</h1>
-        
+    <div id="main-banner" class="container-fluid row">
+        <div id="titulo" class="col-4 col-md-5 col-xlg-5 p-5 justify-content-end">
+            <h1>Make your Burger</h1> 
+        </div>
     </div>
 </template>
 
@@ -16,31 +17,29 @@ export default {
     background: url('/img/burger.jpg');
     background-size:cover;
     background-position: center center;
-    width: 100%;
     height: 72vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-h1 {
-    padding: 2%;
-    width: 35%;
-    padding-left: 5%;
-    color: #fff;
-    text-align: center;
-    font-size: 4.5rem;
+#titulo{
     background-color: #222;
 }
 
-@media screen and (max-width: 777px){
-    h1{
-        font-size: 3.5rem;
-    }
+h1 {
+    padding: 2%;
+    font-size: 3vw;
+    padding-left: 5%;
+    color: #fff;
+    text-align: center;
+    background-color: #222;
 }
-@media screen and (max-width: 375px){
+
+
+@media screen and (max-width: 425px){
     h1{
-        font-size: 2.5rem;
+        font-size: 4vw;
     }
 }
 </style>
