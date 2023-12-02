@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container mb-lg">
+  <div class="main-container container-center mb-lg">
     <h1 class="p-2 my-3">Gerenciar pedidos:</h1>
     <Dashboard/>
   </div>

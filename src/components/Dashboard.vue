@@ -1,7 +1,7 @@
 <template>
     <Messages :msg="msg" v-show="msg" />
-    <div id="burgerTable">
-        <table class="table table-striped w-75 mt-lg ">
+    <div id="burgerTable" class="table-responsive">
+        <table class="table table-striped  mt-lg ">
             <thead>
                 <tr>
                     <th scope="col" class="order-id">#:</th>
@@ -120,6 +120,7 @@ export default {
 #burgerTable {
     display: flex;
     justify-content: center;
+    background-color: #f7c334;
 }
 
 table {
