@@ -1,6 +1,8 @@
 <template>
-    <div id="main-banner">
-        <h1>Make your Burger</h1>
+    <div id="main-banner" class="container-fluid row">
+        <div id="titulo" class="col-4 col-md-5 col-xlg-5 p-5 justify-content-end">
+            <h1>Make your Burger</h1> 
+        </div>
     </div>
 </template>
 
@@ -12,22 +14,32 @@ export default {
 
 <style scoped>
 #main-banner {
-    background: url('/img/burger.jpg') no-repeat 0 -350px;
-    width: 100%;
-    background-size: cover;
-    height: 65vh;
+    background: url('/img/burger.jpg');
+    background-size:cover;
+    background-position: center center;
+    height: 72vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
+#titulo{
+    background-color: #222;
+}
+
 h1 {
     padding: 2%;
-    width: 500px;
+    font-size: 3vw;
     padding-left: 5%;
     color: #fff;
     text-align: center;
-    font-size: 4.5rem;
     background-color: #222;
+}
+
+
+@media screen and (max-width: 425px){
+    h1{
+        font-size: 4vw;
+    }
 }
 </style>

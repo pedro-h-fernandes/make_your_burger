@@ -1,21 +1,21 @@
 <template>
     <Messages :msg="msg" v-show="msg" />
-    <div id="burgerTable">
-        <table style="width:70%;">
+    <div id="burgerTable" class="table-responsive">
+        <table class="table table-striped  mt-lg ">
             <thead>
                 <tr>
-                    <th class="order-id">#:</th>
-                    <th>Cliente:</th>
-                    <th>Pão:</th>
-                    <th>Carne:</th>
-                    <th>Opcionais:</th>
-                    <th>Ações</th>
+                    <th scope="col" class="order-id">#:</th>
+                    <th scope="col">Cliente:</th>
+                    <th scope="col">Pão:</th>
+                    <th scope="col">Carne:</th>
+                    <th scope="col">Opcionais:</th>
+                    <th scope="col">Ações</th>
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody class="table-group-divider">
                 <tr class="burger-table-row" v-for="pedido in pedidos" :key="pedido.id">
-                    <td class="order-number">{{ pedido.id }}</td>
+                    <td scope="row" class="order-number">{{ pedido.id }}</td>
                     <td>{{ pedido.nome }}</td>
                     <td>{{ pedido.pao }}</td>
                     <td>{{ pedido.carne }}</td>
@@ -120,6 +120,7 @@ export default {
 #burgerTable {
     display: flex;
     justify-content: center;
+    background-color: #f7c334;
 }
 
 table {
@@ -128,7 +129,6 @@ table {
 }
 
 thead th {
-    border: 1px solid black;
     background-color: #f7c334;
     text-align: justify;
     padding: 2px;
@@ -142,7 +142,6 @@ tbody td {
 }
 
 tbody td {
-    border: 1px solid black;
     padding-left: 5px;
     font-size: 1.6rem;
 }
@@ -160,11 +159,12 @@ tbody td {
 .acoes div {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .acoes select {
-    width: 55%;
+    width: 95px;
     height: 25px;
     font-size: 1.5rem;
 }
@@ -174,7 +174,7 @@ select option {
 }
 
 .delete-btn {
-    background-color: transparent;
+    background-color: #fff;
     border-radius: 5px;
     padding: 2px;
     border: 1px solid #000000;

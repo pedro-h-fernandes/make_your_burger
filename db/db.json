@@ -108,6 +108,16 @@
       ],
       "status": "Solicitado",
       "id": 7
+    },
+    {
+      "nome": "pedro",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 8
     }
   ]
 }
